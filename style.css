@@ -14,8 +14,10 @@ a{
 #art_thanks, footer{
     background-color: #BBE3FE;
 }
-section{
-    background-image: ;
+.bg{
+    background-image: url("img/LOGO_LEO8NB.jpg");
+    width: 1000px;
+    height: 800px;
 }
 .d-flex{
     display: flex;
