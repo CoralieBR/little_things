@@ -14,3 +14,12 @@ a{
 #art_thanks, footer{
     background-color: #BBE3FE;
 }
+#section{
+    background-image: ;
+}
+.d-flex{
+    display: flex;
+}
+.sound{
+    width: 350px;
+}
