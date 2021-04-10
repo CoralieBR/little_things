@@ -1,27 +1,320 @@
-a{
-   text-decoration: none;
+/* VARIABLES */
+/* couleurs */
+:root {
+    --blue1: #BBE3FE;
+    --blue2: #99D5FE;
+    --blue3: #2372a9;
+    --orange1: #FE6B18;
+    --orange2: #a94710;
+    }
+
+
+/* GENERAL */
+
+*{
+    /* border: dashed 1px yellow;  */
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-#art_about{
-    background-color : #FE6B18
+body, h2 {
+    margin: 0;
 }
-#art_support, header{
-    background-color: #99D5FE
+
+a {
+    text-decoration: none;
 }
-#form{
-    background-color: #a94710;
+p {
+    text-align: justify;
 }
-#art_thanks, footer{
-    background-color: #BBE3FE;
+
+/* TODO arranger l'ensemble pour max-width=1000px; */
+
+
+/* ANCHOR HEADER */
+header{
+    min-height: 120px;
+    background-color: var(--blue2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+header h2 {
+    font-size: 60px;
+    color: var(--orange1);
+}
+header p {
+    font-size: 30px;
+    color: var(--orange2);
+}
+
+
+/* ANCHOR __MENU__Desktop!! */
+#menu-desktop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* display: none; */
+    /* justify-content: space-between; */
+}
+#menu-desktop>div {
+    /* display: none; */
+}
+.menu-desktop {
+    position: fixed;
+    display: none;
+}
+/* #menu_logos {
+    left: 20px;
+    top: 100px;
+}
+#menu_contact {
+    right: 20px;
+    top: 100px;
+}
+#menu_about {
+    left: 20px;
+    bottom: 100px;
+}
+#menu_support {
+    right: 20px;
+    bottom: 100px;
+} */
+
+
+
+
+/* ANCHOR MAIN */
+
+/* ANCHOR Partie 1 : lecteur & à propos */
+#part1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2vh;
 }
 .bg{
+    width: 100%;
+    min-height: 800px;
     background-image: url("img/LOGO_LEO8NB.jpg");
-    width: 1000px;
-    height: 800px;
+    background-size: cover;
 }
+
+/* article About/a propos */
+#art_about{
+    background-color : var(--blue2);
+    flex: 0 1 400px;
+    padding: 1rem 3rem;
+    border-radius: 20px;
+}
+#art_about h3 {
+    color: var(--orange2);
+    margin-left: -10%;
+}
+#art_about div {
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+/* lecteur de musique */
+.music-player{
+    flex: 0 1 300px;
+    min-height: 500px;
+    border: var(--orange1) solid 1rem;
+    border-radius: 20px;
+}
+
+#art_about div{
+    background-color : white;
+}
+
 .d-flex{
-    display: flex;
+    /* display: flex; */
 }
 .sound{
-    width: 350px;
+    /* width: 350px; */
+}
+
+/* ANCHOR Partie 2 : follow-me + insta et youtube */
+#art_follow {
+    background-color: var(--orange1);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+#art_follow>div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#art_follow nav {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+#art_follow h4 {
+    text-align: center;
+}
+#youtube, #instagram {
+    flex: 0 1 500px;
+    min-height: 500px;
+}
+#youtube iframe {
+    width: 100%;
+    min-height: 315px;
+}
+
+
+
+/* ANCHOR Partie 3 : photo seule */
+.bg-image {
+    /* position: relative;
+    perspective: 8px; */
+    max-width: 100%;
+    /* height: 500px;
+    perspective-origin: 50%;
+    display: flex; */
+    min-height: 300px;
+    /* border: 0;
+    margin: 0;
+    padding: 0; */
+}
+.bg-image_image {
+    /* position: sticky; */
+    max-width: 100%;
+    height: auto;
+    /* transform: translateZ(-1px); */
+    /* z-index: 0;  */
+    object-fit: cover;
+
+}
+
+
+/* ANCHOR Partie 4 : support le projet */
+#art_support {
+    background-color: var(--blue3);
+    color: var(--blue1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 25%;
+}
+#art_support h3 {
+    align-self: flex-start;
+
+}
+
+
+
+/* ANCHOR Partie 5 : remerciements */
+#art_thanks {
+    background-color: var(--blue2);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* padding: 1rem 20%; */
+}
+#art_thanks h3 {
+    text-align: center;
+}
+#art_thanks a:hover {
+    background-color: var(--blue1);
+}
+#art_thanks>div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#art_thanks div {
+    flex: 0 1 300px;
+    padding: 20px;
+}
+
+.thanks__img {
+    width: 100%;
+    /* height: 450px; */
+    border-radius: 250px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ANCHOR Partie 6 : contact */
+#form{
+    background-color: var(--orange1);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+#form form {
+    max-width: 700px;
+    flex: 0 1 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form input {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--orange2);
+    padding: 4px;
+    margin: 4px;
+}
+input:focus {
+    /* border: none; */
+    /* border-bottom: 2px solid var(--orange2); */
+    /* border-left: 2px solid var(--orange2); */
+    /* color: red; */
+    /* box-shadow: none; */
+}
+
+#nom, #email, #subject {
+    height: 2rem;
+}
+
+#message {
+    height: 4rem;
+    
+}
+
+
+#submit {
+    width: 100%;
+    border: 2px solid transparent;
+    background-color: var(--orange2);
+    color: var(--orange1);
+    padding: 8px;
+    margin-top: 1rem;
+}
+#submit:hover {
+    background-color: transparent;
+    color: var(--orange2);
+    border: 2px solid var(--orange2);
+}
+
+
+/* ANCHOR Footer */
+footer{
+    background-color: var(--blue1);
+    padding: 1rem;
+}
+footer p {
+    font-size: small;
+    text-align: center;
 }
