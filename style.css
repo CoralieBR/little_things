@@ -36,59 +36,127 @@ header{
     min-height: 120px;
     background-color: var(--blue2);
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 20px 50px;
+    flex-direction: column;
 }
 
 header h1 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 12px;
 }
 header h2 {
-    font-size: 60px;
+    font-size: 40px;
     color: var(--orange1);
 }
-header p {
-    font-size: 30px;
+
+#fr-en a{
+    font-size: 10px;
     color: var(--orange2);
+}
+#fr-en a:hover{
+    font-size: 20px;
+    color: var(--orange1);
 }
 
 
 /* ANCHOR __MENU__Desktop!! */
-#menu-desktop {
+#menu_desktop {
     position: fixed;
     width: 100%;
     height: 100%;
-    /* display: flex; */
-    /* display: none; */
-    /* justify-content: space-between; */
-}
-#menu-desktop>div {
-    /* display: none; */
-}
-.menu-desktop {
-    position: fixed;
     display: none;
 }
-/* #menu_logos {
-    left: 20px;
-    top: 100px;
+
+#menu_desktop a {
+    color: var(--orange2);
+    background-color: #ffffff50;
+    padding: 2px;
 }
-#menu_contact {
-    right: 20px;
-    top: 100px;
+
+#menu_logos {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
 }
-#menu_about {
-    left: 20px;
-    bottom: 100px;
+#menu_logos nav {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff50;
 }
-#menu_support {
-    right: 20px;
-    bottom: 100px;
+/* #detailsdeslogos {
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
+#menu_logos nav a {
+    margin: 0;
+    background-color: transparent;
+}
+#menu_logos i {
+    font-size: 20px;
+    padding: 2px;
+}
+/* .detail-menu-logo {
+    font-size: 20px;
+    display: block;
+    align-self: flex-start;
+    display: none;
+    position: fixed;
+    left: 1rem;
+    background-color: #00000050;
+    margin: 0;
+    padding: 3px;
 } */
 
+#menu_contact {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+#menu_about {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+#menu_support {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
 
+/* ANCHOR MeNU PHONE */
+#menu-phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--blue1);
+    padding: 8px;
+    font-size: 12px;
+}
+#menu-phone div {
+    border: 2px solid var(--orange2);
+    border-radius: 8px;
+    margin: 4px;
+}
+#menu-phone nav {
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+#menu-phone a {
+    color: var(--orange2);
+    padding: 4px;
+}
 
 
 /* ANCHOR MAIN */
@@ -106,6 +174,10 @@ header p {
     min-height: 800px;
     background-image: url("img/LOGO_LEO8NB.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 /* article About/a propos */
@@ -150,7 +222,7 @@ header p {
     display: flex;
     flex-direction: column;
 }
-#art_follow>div {
+#art_follow_header {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -165,15 +237,38 @@ header p {
 #art_follow h4 {
     text-align: center;
 }
+
+#medias {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #youtube, #instagram {
     flex: 0 1 500px;
-    min-height: 500px;
+    /* min-height: 500px; */
+    margin: 1rem;
 }
 #youtube iframe {
     width: 100%;
     min-height: 315px;
+    margin-top: 6px;
 }
 
+#insta {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img-insta {
+    flex: 0 0 150px;
+    height: 150px;
+    width: 150px;
+    margin: 6px;
+    object-fit: cover;
+}
 
 
 /* ANCHOR Partie 3 : photo seule */
@@ -184,10 +279,15 @@ header p {
     /* height: 500px;
     perspective-origin: 50%;
     display: flex; */
-    min-height: 300px;
+    min-height: 800px;
     /* border: 0;
     margin: 0;
     padding: 0; */
+    background-image: url("img/leo1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .bg-image_image {
     /* position: sticky; */
@@ -317,4 +417,46 @@ footer{
 footer p {
     font-size: small;
     text-align: center;
+}
+#nav-footer {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+#nav-footer a{color: var(--orange2);}
+
+
+
+
+/* ANCHOR MEDIA QUERY */
+@media screen and (min-width: 900px){
+    /* Si l'écran dépasse 900px de large, il se passe ça : */
+    #menu_desktop {
+        display: block;
+    }
+    #menu-phone {
+        display: none;
+    }
+    header {
+        flex-direction: row;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    header h2 {
+        font-size: 60px;
+    }
+    #fr-en a{
+        font-size: 20px;
+    }
+    #nav-footer {display: none;}
+
+}
+
+@media screen and (max-width: 500px){
+    #menu-phone{
+        flex-direction: column;
+        text-align: center;
+    }
 }
